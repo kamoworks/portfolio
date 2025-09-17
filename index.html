@@ -55,6 +55,19 @@ input:focus, textarea:focus, select:focus {
     color: #111827 !important;
     background-color: #ffffff !important;
 }
+/* Fix dropdown arrow positioning */
+select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+/* Remove conflicting dropdown arrows */
+.pointer-events-none {
+    display: none;
+}
 </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
@@ -756,7 +769,7 @@ input:focus, textarea:focus, select:focus {
         </li>
     </ul>
     
-    <button class="w-full bg-gray-900 text-white py-4 rounded-xl hover:bg-gray-800 transition font-semibold text-lg mt-auto">
+    <a href="#contact" class="w-full bg-gray-900 text-white py-4 rounded-xl hover:bg-gray-800 transition font-semibold text-lg mt-auto block text-center">
         Start Growing
     </button>
 </div>
@@ -797,7 +810,7 @@ input:focus, textarea:focus, select:focus {
         </li>
     </ul>
     
-    <button class="w-full bg-indigo-600 text-white py-4 rounded-xl hover:bg-indigo-700 transition font-semibold text-lg mt-auto">
+    <a href="#contact" class="w-full bg-indigo-600 text-white py-4 rounded-xl hover:bg-indigo-700 transition font-semibold text-lg mt-auto block text-center">
         Accelerate Growth
     </button>
 </div>
@@ -834,7 +847,7 @@ input:focus, textarea:focus, select:focus {
                     </li>
                 </ul>
                 
-                <button class="w-full bg-purple-600 text-white py-4 rounded-xl hover:bg-purple-700 transition font-semibold text-lg mt-auto">
+                <a href="#contact" class="w-full bg-purple-600 text-white py-4 rounded-xl hover:bg-purple-700 transition font-semibold text-lg mt-auto block text-center">
                     Dominate Market
                 </button>
             </div>
@@ -1099,10 +1112,6 @@ input:focus, textarea:focus, select:focus {
         <option value="Full Package" class="text-gray-900">Complete Marketing Ecosystem</option>
         <option value="Not Sure" class="text-gray-900">Not sure - need consultation</option>
     </select>
-    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 top-10">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" class="w-5 h-5">
-            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
     </div>
 </div>
 
@@ -1116,10 +1125,6 @@ input:focus, textarea:focus, select:focus {
         <option value="$2500-5000" class="text-gray-900">$2,500 - $5,000</option>
         <option value="$5000+" class="text-gray-900">$5,000+</option>
     </select>
-    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 top-10">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" class="w-5 h-5">
-            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
     </div>
 </div>
 
@@ -1133,10 +1138,6 @@ input:focus, textarea:focus, select:focus {
         <option value="Within a month" class="text-gray-900">Within a month</option>
         <option value="Just exploring" class="text-gray-900">Just exploring options</option>
     </select>
-    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 top-10">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" class="w-5 h-5">
-            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-        </svg>
     </div>
 </div>
 
@@ -1149,16 +1150,16 @@ input:focus, textarea:focus, select:focus {
 
         <!-- Bottom CTA -->
         <div class="text-center mt-16" data-aos="fade-up" data-aos-delay="200">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
-                <h4 class="text-2xl font-bold mb-4">Prefer to Chat First?</h4>
-                <p class="text-indigo-100 mb-6 text-lg">
-                    Book a free 30-minute strategy call where we'll discuss your challenges, goals, and how I can help you achieve breakthrough results.
-                </p>
-                <a href="https://calendly.com/kamooliphant/30min" target="_blank" class="inline-block bg-white text-indigo-600 font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition duration-300 text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
-                    Schedule Your Free Call Now
-                </a>
-            </div>
-        </div>
+    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 max-w-4xl mx-auto">
+        <h4 class="text-2xl font-bold mb-4">Prefer to Chat First?</h4>
+        <p class="text-indigo-100 mb-6 text-lg">
+            Book a free 30-minute strategy call where we'll discuss your challenges, goals, and how I can help you achieve breakthrough results.
+        </p>
+        <a href="https://calendly.com/kamooliphant/30min" target="_blank" class="inline-block bg-white text-indigo-600 font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition duration-300 text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
+            Schedule Your Free Call Now
+        </a>
+    </div>
+</div>
     </div>
 </section>
 
